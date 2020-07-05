@@ -25,7 +25,7 @@ for image in tqdm(x_train):
 xs = np.array(xs).reshape((60000, 14, 28, 1))/255
 ys = np.array(ys).reshape((60000, 14, 28, 1))/255
 
-while True:
-  history = model.fit(xs, ys, epochs=1)
+for i in range(10):
+  history = model.fit(xs, ys, epochs=3)
 
   model.save('model.h5')

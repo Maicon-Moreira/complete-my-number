@@ -238,7 +238,7 @@
             }
           },
           {
-            "class_name": "LambdaRemoveFirstSubTensor",
+            "class_name": "Lambda",
             "config": {
               "name": "lambda_6",
               "trainable": true,

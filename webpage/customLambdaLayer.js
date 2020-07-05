@@ -1,7 +1,7 @@
 // Essa camada do modelo teve que ser escrita a mão,
 // pois a versão Javascript do Tensorflow não suporta nativamente
 
-class LambdaRemoveFirstSubTensor extends tf.layers.Layer {
+class Lambda extends tf.layers.Layer {
   constructor() {
     super({});
     this.supportsMasking = true;
@@ -25,7 +25,7 @@ class LambdaRemoveFirstSubTensor extends tf.layers.Layer {
   }
 
   static get className() {
-    return 'LambdaRemoveFirstSubTensor';
+    return 'Lambda';
   }
 }
-tf.serialization.registerClass(LambdaRemoveFirstSubTensor)
+tf.serialization.registerClass(Lambda)
