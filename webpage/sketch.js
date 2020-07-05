@@ -3,7 +3,7 @@ const gridSize = 28
 const quadSize = ws / gridSize
 let grid = []
 let model
-let empty = true
+let empty = false
 
 async function loadModel() {
   model = await tf.loadLayersModel('./model/model.json');
@@ -19,20 +19,7 @@ function setup() {
   footer.innerHTML = 'Made by <a target="blank" href="https://www.linkedin.com/in/maicon-moreira-38ab691a4/">Maicon</a> with ❤️'
   document.body.appendChild(footer)
 
-  textAlign(CENTER, CENTER)
-  textSize(20)
-  background(255)
-
-  text('Desenhe aqui a parte\n superior de um número...', ws / 2, ws / 4)
-  text('...e eu completarei\n a parte de baixo aqui,\n como mágica 🤗', ws / 2, 3 * ws / 4)
-  line(0, ws / 2, ws, ws / 2)
-
-  for (let y = 0; y < gridSize / 2; y++) {
-    grid[y] = []
-    for (let x = 0; x < gridSize; x++) {
-      grid[y][x] = [0]
-    }
-  }
+  reset()
 }
 
 function draw() {
@@ -42,7 +29,7 @@ function draw() {
     // console.log(model.predict)
   }
 
-  if (mouseIsPressed) {
+  if (mouseIsPressed && mouseX > 0 && mouseX < ws && mouseY > 0 && mouseY < ws / 2) {
     setEmpty()
 
     const x = Math.floor(mouseX / quadSize)
@@ -113,4 +100,33 @@ function update() {
       rect(quadX * quadSize, quadY * quadSize, quadSize, quadSize)
     }
   }
+}
+
+function reset() {
+  if (!empty) {
+
+    empty = true
+    textAlign(CENTER, CENTER)
+    textSize(20)
+    background(255)
+    fill(0)
+
+    text('Desenhe aqui a parte\n superior de um número...', ws / 2, ws / 4)
+    text('...e eu completarei\n a parte de baixo aqui,\n como mágica 🤗', ws / 2, 3 * ws / 4)
+
+    stroke(0)
+    line(0, ws / 2, ws, ws / 2)
+
+    for (let y = 0; y < gridSize / 2; y++) {
+      grid[y] = []
+      for (let x = 0; x < gridSize; x++) {
+        grid[y][x] = [0]
+      }
+    }
+  }
+}
+document.getElementById('_clear').onclick = reset
+
+document.getElementsByTagName('canvas')[0].onclick = e => {
+  e.preventDefault()
 }
