@@ -8,6 +8,8 @@ Demonstração: https://www.youtube.com/watch?v=WefbqdMbYso
 
 Teste agora em: https://complete-meu-numero.vercel.app/
 
+Google Colab: https://colab.research.google.com/drive/1Age5b0THNmzzt1glpwYbRAGGDpY1tfFJ
+
 ### Explicação técnica
 
 ![Latent Space Representation](https://miro.medium.com/max/3200/0*kHJ_LsPi-jz_CreZ.png)
