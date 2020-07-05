@@ -1,0 +1,24 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,181,0,1) 0%, rgba(0,213,255,1) 100%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+canvas {
+  border: 10px dashed black;
+}
+
+h1 {
+  text-align: center;
+  max-width: 300px;
+  font-size: 40px;
+}
