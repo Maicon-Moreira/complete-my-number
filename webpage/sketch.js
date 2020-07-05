@@ -38,7 +38,7 @@ function draw() {
     for (let quadX = 0; quadX < gridSize; quadX++) {
       for (let quadY = 0; quadY < gridSize / 2; quadY++) {
         const distance = dist(x, y, quadX, quadY)
-        if (distance < 1.5) {
+        if (distance < 1.3) {
           let value = 1
           if (value > 1) value = 1
           if (value < 0) value = 0
