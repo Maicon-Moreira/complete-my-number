@@ -5,6 +5,7 @@
 Complete my number é um programa em Python que utiliza um modelo de Inteligência artificial para prever a parte inferior de um número baseado na parte superior desenhada pelo usuário.
 
 Demonstração: https://www.youtube.com/watch?v=WefbqdMbYso
+
 Teste agora em: https://complete-meu-numero.vercel.app/
 
 ### Explicação técnica
