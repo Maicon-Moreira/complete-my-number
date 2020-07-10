@@ -1,12 +1,13 @@
 # Complete My Number
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/850c484f-4136-48ad-8b50-e969b3830996/deploy-status)](https://app.netlify.com/sites/complete-my-number/deploys)
 
 Complete my number é um programa em Python que utiliza um modelo de Inteligência artificial para prever a parte inferior de um número baseado na parte superior desenhada pelo usuário.
 
 Demonstração: https://www.youtube.com/watch?v=WefbqdMbYso
 
-Teste agora em: https://complete-meu-numero.vercel.app/
+Teste agora em: https://complete-my-number.netlify.app/
 
 Google Colab: https://colab.research.google.com/drive/1Age5b0THNmzzt1glpwYbRAGGDpY1tfFJ
 
